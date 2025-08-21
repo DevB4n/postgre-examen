@@ -16,6 +16,7 @@ CREATE TABLE compra(
     fecha_compra TIMESTAMP,
     total INT(14),
     metodo metodo
+    ADD CONSTRAINT fk_id_clienteFOREIGN FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
 );
 
 DROP TABLE IF EXISTS compra_productos;
