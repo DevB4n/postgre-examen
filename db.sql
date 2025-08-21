@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS categoria_producto;
 DROP TABLE IF EXISTS clientes;
 DROP TYPE  IF EXISTS metodo_pago;
 
-
 CREATE TYPE metodo_pago AS ENUM ('tarjeta', 'efectivo');
 
 CREATE TABLE clientes (

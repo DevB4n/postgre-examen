@@ -4,14 +4,14 @@ WHERE stock < 5
 ORDER BY stock ASC;
 
 
-SELECT
-  DATE_TRUNC('month', fecha_compra) AS mes,
-  SUM(total) AS ventas_totales
+SELECT DATE_TRUNC('month', fecha_compra) AS mes,
+       SUM(total) AS ventas_totales
 FROM compra
-WHERE EXTRACT(YEAR FROM fecha_compra) = :anio
-  AND EXTRACT(MONTH FROM fecha_compra) = :mes
+WHERE EXTRACT(YEAR FROM fecha_compra) = 2025
+  AND EXTRACT(MONTH FROM fecha_compra) = 8
 GROUP BY 1
 ORDER BY 1;
+
 
 SELECT c.id_cliente, c.nombre, c.apellido, COUNT(*) AS compras_realizadas
 FROM compra co
